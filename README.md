@@ -1,10 +1,10 @@
-# grunt-connect-rewrite v0.2.1 [![Build Status](https://travis-ci.org/viart/grunt-connect-rewrite.png?branch=master)](https://travis-ci.org/viart/grunt-connect-rewrite)
+# grunt-nate-connect-rewrite v0.2.1 [![Build Status](https://travis-ci.org/viart/grunt-nate-connect-rewrite.png?branch=master)](https://travis-ci.org/viart/grunt-nate-connect-rewrite)
 
 > This plugin provides RewriteRules middleware for the Grunt Connect / Express.
 > Which could be used to redirect (rewrite internally or redirect using HTTP codes) User to the specific URL based on RegExp Rules.
 
 ## More flexible alternative
-In case you like this plugin it makes sense to look at [http-rewrite-middleware](https://github.com/viart/http-rewrite-middleware)
+In case you like this plugin it makes sense to look at [http-rewrite-middleware](https://github.com/th3nate/http-rewrite-middleware)
 as more flexible alternative.
 
 ## Getting Started
@@ -13,7 +13,7 @@ This plugin requires Grunt `~0.4.1`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-connect-rewrite --save-dev
+npm install grunt-nate-connect-rewrite --save-dev
 ```
 
 ### Options
@@ -63,10 +63,10 @@ In your project's Gruntfile:
 * Add a section named `rules` to your existing Connect or Express definition.
     **Please note:** unlike options, rules cannot be set per server, so the `rules` attribute must always be nested directly under `connect` or `express`.
 * Add `configureRewriteRules` before the web server task.
-* Don't forget to load the plugin (e.g. `grunt.loadNpmTasks('grunt-connect-rewrite')`).
+* Don't forget to load the plugin (e.g. `grunt.loadNpmTasks('grunt-nate-connect-rewrite')`).
 
 ```js
-var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
+var rewriteRulesSnippet = require('grunt-nate-connect-rewrite/lib/utils').rewriteRequest;
 grunt.initConfig({
     connect: {
         options: {
@@ -112,7 +112,7 @@ grunt.initConfig({
 })
 
 grunt.loadNpmTasks('grunt-contrib-connect');
-grunt.loadNpmTasks('grunt-connect-rewrite');
+grunt.loadNpmTasks('grunt-nate-connect-rewrite');
 
 // "configureRewriteRules" should be before the "connect"/"express" task
 grunt.registerTask('server', function (target) {
